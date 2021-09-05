@@ -1,7 +1,8 @@
-import Featured from "../Featured/Featured";
-import Topbar from "../TopBar/Topbar";
+import Topbar from "../Components/TopBar/Topbar";
+import Featured from "../Components/Featured/Featured";
+import List from "../Components/List/List";
 import "./home.scss";
-import List from "../List/List";
+
 const Home = () => {
     return (
         <div className="home">

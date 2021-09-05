@@ -9,10 +9,10 @@ const Topbar = () => {
         return () => (window.onscroll = null);
     };
     return (
-        <div className={isScrolled ? "navbar scrolled" : "topbar"}>
+        <div className={isScrolled ? "topbar scrolled" : "topbar"}>
             <div className="container">
                 <div className="left">
-                <img src="https://assets.brand.microsites.netflix.io/assets/493f5bba-81a4-11e9-bf79-066b49664af6_cm_1440w.png?v=30" alt=""></img>
+                <img src="https://assets.brand.microsites.netflix.io/assets/493f5bba-81a4-11e9-bf79-066b49664af6_cm_1440w.png?v=30" alt="" />
                 <span>Homepage</span>
                 <span>Series</span>
                 <span>Movies</span>
@@ -23,7 +23,7 @@ const Topbar = () => {
                  <Search  className="icon"/>
                 <span>KID</span>
                 <Notifications  className="icon"/>
-               <img src="https://cdn0.iconfinder.com/data/icons/social-media-network-4/48/male_avatar-512.png" alt=""></img>
+               <img src="https://cdn0.iconfinder.com/data/icons/social-media-network-4/48/male_avatar-512.png" alt="" />
                <div className="profile">
                <ArrowDropDown  className="icon"/>
                <div className="options">
