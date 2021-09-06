@@ -1,16 +1,27 @@
 import "./ListItems.scss";
 import { PlayArrow, Add, ThumbDownAltOutlined, ThumbUpAltOutlined } from "@material-ui/icons";
+import { useState } from "react";
 
-const ListItems = () => {
-    return (
-        <div className="ListItems">
+const ListItems = ({index}) => {
+  const [isHovered , setIsHovered] = useState(false);
+  const trailer ="https://player.vimeo.com/video/599019945?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=3a340011ad"; 
+  
+  return (
+        <div className="ListItems" 
+        style= {{left: isHovered && index * 225 - 50 + index * 2.5}}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        >
            <img src="https://m.media-amazon.com/images/I/71OIhbUOF-L.jpg" alt=""/>
+            {isHovered && (
+              <>
+            <video src={trailer} autoPlay={true} loop />
             <div className="itemInfo">
               <div className="icons">
-              <PlayArrow />
-              <Add/>
-              <ThumbUpAltOutlined/>
-              <ThumbDownAltOutlined />
+              <PlayArrow className="icon" />
+              <Add className="icon" />
+              <ThumbUpAltOutlined className="icon" /> 
+              <ThumbDownAltOutlined className="icon" />
 
               </div>
               <div className="itemInfoTop">
@@ -20,10 +31,12 @@ const ListItems = () => {
               </div>
               <div className="desc">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. At quaerat, vel sequi praesentium voluptatum doloremque ad quis quidem? Quia aut doloribus distinctio dolore rerum 
-              quibusdam nemo voluptatum, enim nulla saepe.
+              
               </div>
               <div className="genre">Action</div>
-                </div> 
+                </div>
+                </>
+                )} 
         </div>
     )
 }
