@@ -1,6 +1,6 @@
-import Topbar from "../Components/TopBar/Topbar";
-import Featured from "../Components/Featured/Featured";
-import List from "../Components/List/List";
+import Topbar from "../../Components/TopBar/Topbar";
+import Featured from "../../Components/Featured/Featured";
+import List from "../../Components/List/List";
 import "./home.scss";
 
 const Home = () => {
